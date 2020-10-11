@@ -5,7 +5,11 @@ const taskSchema = new mongoose.Schema(
     {
 
         type: String,
-        title: String,
+        title: {
+            type: String,
+            required: true
+        }
+        ,
         description: String,
         expiryDate: String,
         setting: String,

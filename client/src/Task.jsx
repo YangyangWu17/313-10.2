@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-datepicker'
+import './main.css'
 import { Header, Radio, Label, Input, TaskSetting, Button } from './TaskCompnents'
 const Task = (props) => {
     const [taskInfo, setTaskInfo] = useState({

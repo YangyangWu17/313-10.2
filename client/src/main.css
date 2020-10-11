@@ -32,6 +32,10 @@ label{
 .inputDiv{
     width: 600px;
     height:30px;
+    font-size: 20px;
+    margin: 6px;
+    margin-left: 20px;
+   margin-right: 5px;
 }
 .inputDiv input{
     float: right;
@@ -77,4 +81,8 @@ margin-left: 20px;
 .card{
     background-color: antiquewhite;
     margin:6px;
+}
+.inline{
+    display: inline;
+
 }

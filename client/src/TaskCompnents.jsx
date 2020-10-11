@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 import './main.css'
-import axios from 'axios';
 import { storage } from './firebase'
 
 
@@ -22,6 +21,8 @@ function NavBar(props) {
             <Link className='linkDiv' to={props.route1}>{props.text1}</Link>
             |
             <Link className='linkDiv' to={props.route2}>{props.text2}</Link>
+            |
+            <Link className='linkDiv' to={props.route3}>{props.text3}</Link>
         </ul>
     </div>
 }
@@ -176,14 +177,20 @@ function ImageTask(props) {
             src={url || 'https://via.placeholder.com/200'}
             alt="Uploaded Image" height="200" width="200" />
         <br />
-        <Radio
-            name="setting"
-            value={url}
-            onChange={props.onChange} />
+        <div >
+            <Radio
+                name="setting"
+                value={url}
+                onChange={props.onChange} />
+            <Radio
+                name="setting"
+                value=''
+                onChange={props.onChange} />
+        </div>
     </div>
 }
 const Input = (props) => {
-    return <div className='inputDiv choice'>
+    return <div className='inputDiv'>
         <label>{props.text} </label>
         <input
             name={props.name}

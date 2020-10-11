@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 
 const User = require('./models/User')
 const Task = require("./models/Task")
+const Image = require("./models/Image")
+const Text = require('./models/Text')
 const mongoose = require('mongoose')
 const passport = require('passport')
 const cors = require('cors')
@@ -89,13 +91,25 @@ app.post('/task', (req, res) => {
   task.save()
   res.json(('saved to db:' + task));
 })
-app.post('/upload', (req, res) => {
-  const task = new Task({
-    image: req.body.image
+app.post('/image', (req, res) => {
+  console.log(req.body)
+  const image = new Image({
+    imageURL: req.body.imageURL,
+    description: req.body.description
   })
-  task.save()
-  res.json(('saved to db:' + task));
+  image.save()
+  res.json(('saved to db:' + image));
 })
+app.post('/text', (req, res) => {
+  console.log(req.body)
+  const text = new Text({
+    text: req.body.text,
+    time: req.body.time
+  })
+  text.save()
+  res.json(('saved to db:' + text));
+})
+
 app.get('/deakin', (req, res) => {
   if (req.isAuthenticated()) {
     res.sendFile(__dirname + '/deakin.html')

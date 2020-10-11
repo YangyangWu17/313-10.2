@@ -1,0 +1,35 @@
+.header{
+    background-color: antiquewhite;
+    height: 25px;
+    font-size: 20px;
+    margin: 6px;
+}
+
+.choice{
+    vertical-align:middle;
+    display: inline;
+}
+.linkDiv{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.image{
+    width: 500px;
+    height: 500px;
+}
+.record_status{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   background-color: gray;
+   align-items: center;
+   margin-left: 400px;
+   margin-right: 400px;
+}
+.Voice{
+    align-items: center;
+}
+.url{
+    font-size: 12px;
+}
+.main{
+    width: 300px;
+}

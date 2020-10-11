@@ -36,6 +36,7 @@ function TaskCard(props) {
                 <p>require master?:{props.master}</p>
                 <p>reward per response{props.reward}</p>
                 <p>number of workers:{props.number}</p>
+                <p>setting detail:{props.setting}</p>
             </Accordion.Content>
         </Accordion>
         <a onClick={() => { props.delete(props._id) }}>delete </a>
@@ -81,8 +82,7 @@ function CardList(props) {
 class Worker extends Component {
 
     constructor(props) {
-        super(props);
-
+        super(props)
         this.deleteTask = this.deleteTask.bind(this)
 
         this.state = {

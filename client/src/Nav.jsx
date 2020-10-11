@@ -7,8 +7,10 @@ const Nav = (props) => {
         <NavBar
             text1="New Requester Task"
             text2="Worker Task"
+            text3="iCrowdTask"
             route1='/task'
             route2='/workers'
+            route3='/iCrowdTask'
         />
     </div>
 }
